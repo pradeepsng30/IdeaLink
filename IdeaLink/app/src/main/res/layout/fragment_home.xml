@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    tools:context=".Home$PlaceholderFragment">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:background="#184050"
+        android:weightSum="1">
+
+        <ImageButton
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/up"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.09"
+            android:src="@drawable/up"
+            android:background="#184050"
+            android:onClick="ButtonClicked"
+
+            android:scaleType="fitCenter"
+            android:padding="0dp"
+            android:adjustViewBounds="true"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.18">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/left"
+                android:src="@drawable/left"
+                android:background="#184050"
+                android:layout_weight="1"
+
+                android:onClick="ButtonClicked"
+
+                android:scaleType="fitCenter"
+                android:padding="0dp"
+                android:layout_gravity="center_horizontal"
+                android:adjustViewBounds="true"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/right"
+                android:src="@drawable/right"
+                android:layout_weight="1"
+                android:onClick="ButtonClicked"
+                android:background="#184050"
+
+                android:scaleType="fitCenter"
+                android:padding="0dp"
+                android:layout_gravity="center_horizontal"
+                android:adjustViewBounds="true"/>
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/down"
+            android:background="#184050"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.07"
+            android:src="@drawable/down"
+            android:onClick="ButtonClicked"
+
+            android:scaleType="fitCenter"
+            android:padding="0dp"
+
+            android:adjustViewBounds="true"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
