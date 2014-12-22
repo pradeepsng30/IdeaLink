@@ -1,5 +1,7 @@
 package com.apperture.idealink;
-
+/**
+ * Created by Pradeep on 08-12-2014.
+ */
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -20,6 +22,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -30,7 +33,7 @@ public class Keyboard extends Activity implements View.OnTouchListener, View.OnK
     int lastYpos = 0;
     boolean keyboard = false;
     Thread checking;
-
+    static TextView state;
 
     private static final int REQUEST_CONNECT_DEVICE = 1;
     private static final int REQUEST_ENABLE_BT = 2;
@@ -43,7 +46,9 @@ public class Keyboard extends Activity implements View.OnTouchListener, View.OnK
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_keyboard);
 
-
+        state=(TextView)findViewById(R.id.state);
+        Log.d("oncreate","Keyboard");
+        Backend.restoreState();
         Display display = getWindowManager().getDefaultDisplay();
         int width = display.getWidth();
 
@@ -107,6 +112,16 @@ public class Keyboard extends Activity implements View.OnTouchListener, View.OnK
     Backend.setupCommand();
     }
 
+
+    public static boolean displayState(String curState){
+
+        try {
+            state.setText(curState);
+        }
+        catch(Exception e){return false;}
+        Log.d("Key","statedisplay true");
+        return true;
+    }
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
 
         Backend.onActivityResult(requestCode,resultCode,data);
@@ -148,6 +163,7 @@ public class Keyboard extends Activity implements View.OnTouchListener, View.OnK
                 Backend.mCommandService.start();
             }
         }
+        displayState(Backend.append);
     }
 
 
@@ -340,8 +356,13 @@ public class Keyboard extends Activity implements View.OnTouchListener, View.OnK
         Log.d("SET", "Foucs");
     }
 
-    public void ButtonClicked(View view){
-        Log.d("Keybrd ","Button clicked");
+    public void OnClick(View view)
+    {Intent intent;
+        switch(view.getId()){
+            case R.id.Home: intent = new Intent(this, Home.class);
+                startActivity(intent);break;
+            case R.id.Media: intent = new Intent(this, MediaVlc.class);
+                startActivity(intent);break;
+        }
     }
-
 }

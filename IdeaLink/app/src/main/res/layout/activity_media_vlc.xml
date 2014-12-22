@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.apperture.idealink.MediaVlc">
+    <fragment
+        android:name="com.apperture.idealink.MenuFragment"
+        android:id="@+id/menuFragment"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        tools:layout="@layout/fragment_menu" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/menuFragment"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="86dp"
+            android:layout_weight="2">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/prev"
+                android:layout_weight="1"
+                android:src="@drawable/prev"
+                android:onClick="vlcClick"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/play"
+                android:layout_weight="0.5"
+                android:src="@drawable/play"
+                android:onClick="vlcClick"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/next"
+                android:layout_weight="1"
+                android:src="@drawable/next"
+                android:onClick="vlcClick"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/minus"
+                android:src="@drawable/minus"
+                android:layout_weight="1"
+                android:onClick="vlcClick"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/audio"
+                android:src="@drawable/audio"
+                android:layout_weight="2"
+                android:onClick="vlcClick"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/plus"
+                android:src="@drawable/plus"
+                android:layout_weight="1"
+                android:onClick="vlcClick"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

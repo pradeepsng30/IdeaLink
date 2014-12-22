@@ -1,0 +1,48 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    tools:context="com.apperture.idealink.MenuFragment">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="51dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:id="@+id/state"
+            android:textAlignment="center"
+            android:text="State"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+
+        android:paddingTop="0dp"
+       >
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/Home"
+            android:layout_weight="1"
+            android:onClick="OnClick"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/key"
+            android:layout_weight="1"
+            android:onClick="OnClick"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/Media"
+            android:layout_weight="1"
+            android:onClick="OnClick"/>
+    </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

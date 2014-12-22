@@ -2,10 +2,8 @@
 <resources>
 
     <string name="app_name">IdeaLink</string>
-    <string name="title_section1">Home</string>
-    <string name="title_section2">Keyboard / mouse</string>
-    <string name="title_section3">Section 3</string>
-    <string name="hello">Hello World, IdeaLink!</string>
+
+
     <string name="btn_find">Catch Device</string>
     <string name="bt_not_enabled_leaving">Bluetooth was not enabled. Leaving IdeaLink</string>
     <string name="title_paired_devices">Paired Devices</string>
@@ -25,8 +23,9 @@
     <string name="navigation_drawer_close">Close drawer</string>
     <string name="action_example">Example action</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_keyboard">Keyboard</string>
+    <string name="title_activity_keyboard">Keyboard/Mouse</string>
     <string name="hello_world">Hello world!</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_media_vlc">VLC Control</string>
 
 </resources>
